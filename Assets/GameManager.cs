@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        PlayScoreDisplay.text = PlayScore.ToString();
     }
 
     public void Updatelife()

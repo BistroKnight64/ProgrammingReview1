@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public float HorizInput;
     public float VertInput;
     public float Speed;
+    public bool Ispowered;
     public bool Canlose;
     public Vector2 StupidC;
 
@@ -35,7 +36,11 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag("Enemy") && Ispowered == true)
+        {
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Enemy") && Ispowered == false)
         {
             Speed = 0;
             amogus.sprite = Deadstuff;

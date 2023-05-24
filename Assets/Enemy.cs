@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public GameObject Player;
     public Vector2 TrackTarget;
-    public float speed;
+    public float speed = 3;
 
 
     // Start is called before the first frame update
